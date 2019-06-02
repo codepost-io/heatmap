@@ -1,6 +1,7 @@
 # Configuration files
 codepost-config.yaml
 .codepost-config.yaml
+codePost_heatmap_cache*.json
 
 # Build data
 /.eggs
