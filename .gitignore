@@ -1,3 +1,6 @@
+# Jupyter sandbox
+sandbox.ipynb
+
 # Configuration files
 codepost-config.yaml
 .codepost-config.yaml
@@ -20,3 +23,6 @@ __pycache__
 
 # macOS metadata
 .DS_Store
+
+# Jupyter/IPython metadata
+.ipynb_checkpoints
