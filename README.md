@@ -9,7 +9,7 @@ This library requires seaborn (and thus matplotlib) to draw the actual heatmaps.
 
 ## Example
 
-See [example.ipynb](a real example).
+See [a real example](example.ipynb).
 
 ## Testing
 
