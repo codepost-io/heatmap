@@ -74,7 +74,7 @@ def build_heatmap(hmapdata: HeatmapData,
     """
     heatmap = {}
 
-    for (comment_id, comment_obj) in hmapdata.get_comments():
+    for (comment_id, comment_obj) in hmapdata.get_comments().items():
 
         rubricComment_obj = comment_obj["rubricComment"]
         
