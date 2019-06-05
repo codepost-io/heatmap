@@ -31,6 +31,29 @@ try:
 except ImportError:
     from yaml import Loader as _YamlLoader
 
+try:
+    # Python 3
+    from enum import Enum as _Enum
+except ImportError:
+    no_enum = True
+
+    # Python 2 fallbacks
+    try:
+        from aenum import Enum as _Enum
+        no_enum = False
+    except ImportError:
+        try:
+            from enum34 import Enum as _Enum
+            no_enum = False
+        except ImportError:
+            pass
+
+    if no_enum:
+        raise RuntimeError(
+            "This package requires an 'Enum' object. These are available "
+            "in Python 3.4+, but requires a third-party library, either "
+            "'enum34' or 'aenum'. Please install:\n\npip install --user aenum")
+
 #########################################################################
 
 
@@ -180,4 +203,17 @@ def configure_apikey():
         "codePost API calls are expected to fail.")
     return None
     
+#########################################################################
+
+
+class DocEnum(_Enum):
+    def __init__(self, value, doc):
+        try:
+            super().__init__()
+        except TypeError:
+            # Python 2: the super() syntax was only introduced in Python 3.x
+            super(DocEnum, self).__init__()
+        self._value_ = value
+        self.__doc__ = doc
+
 #########################################################################
