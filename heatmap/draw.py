@@ -5,16 +5,8 @@ from __future__ import print_function # Python 2
 #
 import os as os
 
-try:
-    # Python 3
-    from urllib.parse import urljoin
-except ImportError:
-    # Python 2
-    from urlparse import urljoin
-
 # External dependencies
-#     
-import requests as _requests
+#
 import pandas as _pd               # Package to manipulate tables of data
 import seaborn as _sns             # Package to create visual heatmap
 import matplotlib.pyplot as _plt   # Package to plot heatmap

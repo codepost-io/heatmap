@@ -17,12 +17,8 @@ except ImportError:
     from urlparse import urljoin
 
 # External dependencies
-#     
+#
 import requests as _requests
-import pandas as _pd               # Package to manipulate tables of data
-import seaborn as _sns             # Package to create visual heatmap
-import matplotlib.pyplot as _plt   # Package to plot heatmap
-import numpy as _np                # array() to tweak the palette
 
 # Local dependencies
 #
